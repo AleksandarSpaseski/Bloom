@@ -20,6 +20,8 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class StartingClass extends Applet implements Runnable, KeyListener {
+	
+	//Ovde pocnuva the movie of the year n-tiot grad.
 
 	private int period = 0;
 	private static int frequency = 80;
