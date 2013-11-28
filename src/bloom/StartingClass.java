@@ -25,7 +25,6 @@ public class StartingClass extends Applet implements Runnable, KeyListener {
 	private static int frequency = 80;
 	private Korpa korpa;
 	private ArrayList<Fruit> ovosja;
-
 	private URL base;
 	private Graphics second;
 	private Image image, character, background, ananas, apple, banana, brokula,
