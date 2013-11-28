@@ -3,13 +3,11 @@ package bloom;
 import java.applet.Applet;
 import java.applet.AudioClip;
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.FontFormatException;
 import java.awt.Frame;
 import java.awt.Graphics;
 import java.awt.Image;
-import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.io.FileInputStream;
@@ -19,6 +17,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Random;
 
+@SuppressWarnings("serial")
 public class StartingClass extends Applet implements Runnable, KeyListener {
 
 	private int period = 0;
@@ -103,6 +102,7 @@ public class StartingClass extends Applet implements Runnable, KeyListener {
 	public void destroy() {
 	}
 
+	@SuppressWarnings("static-access")
 	@Override
 	public void run() {
 		while (true && !lost) {
@@ -192,6 +192,7 @@ public class StartingClass extends Applet implements Runnable, KeyListener {
 
 	}
 
+	@SuppressWarnings("static-access")
 	@Override
 	public void paint(Graphics g) {
 		if (!lost) {

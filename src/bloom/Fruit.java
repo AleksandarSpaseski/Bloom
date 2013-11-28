@@ -2,8 +2,6 @@ package bloom;
 
 import java.awt.Rectangle;
 
-//SMENVAM VO FRUIT
-
 import java.util.Random;
 
 public abstract class Fruit {
@@ -11,8 +9,8 @@ public abstract class Fruit {
 	protected int centerX, centerY;
 	public static int speedY = 2;
 	protected int points;
-	
-	public Rectangle r = new Rectangle(0,0,0,0);
+
+	public Rectangle r = new Rectangle(0, 0, 0, 0);
 
 	public Fruit() {
 		Random rand = new Random();
@@ -40,7 +38,7 @@ public abstract class Fruit {
 	public void setCenterY(int centerY) {
 		this.centerX = centerY;
 	}
-	
+
 	abstract public Vid getVid();
 
 }
