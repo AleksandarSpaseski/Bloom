@@ -1,6 +1,9 @@
 package bloom;
 
 import java.awt.Rectangle;
+
+//SMENVAM VO FRUIT
+
 import java.util.Random;
 
 public abstract class Fruit {
