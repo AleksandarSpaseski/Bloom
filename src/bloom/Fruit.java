@@ -1,10 +1,6 @@
 package bloom;
 
 import java.awt.Rectangle;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin
 import java.util.Random;
 
 public abstract class Fruit {
