@@ -31,7 +31,7 @@ public class StartingClass extends Applet implements Runnable, KeyListener {
 	private AudioClip audio, audioInGood, audioInBad, audioSplash;
 	private Font font;
 	private int scale = 500;
-	private String gameMode;
+	private String gameMode = "standard";
 	private boolean lost = false;
 
 	@Override
@@ -53,7 +53,7 @@ public class StartingClass extends Applet implements Runnable, KeyListener {
 
 		try {
 			font = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT,
-					new FileInputStream("data/font.ttf"));
+					new FileInputStream(gameMode+"/font.ttf"));
 			font = font.deriveFont(20.0F);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
