@@ -3,9 +3,7 @@ package bloom;
 import java.awt.Rectangle;
 import java.util.Random;
 
-//promena vo ffruit;
-
-public abstract class Fruit {
+public abstract class Item {
 
 	protected int centerX, centerY;
 	public static int speedY = 2;
@@ -13,7 +11,7 @@ public abstract class Fruit {
 
 	public Rectangle r = new Rectangle(0, 0, 0, 0);
 
-	public Fruit() {
+	public Item() {
 		Random rand = new Random();
 		centerY = 0;
 		centerX = rand.nextInt(680) + 40;
@@ -40,6 +38,6 @@ public abstract class Fruit {
 		this.centerX = centerY;
 	}
 
-	abstract public Vid getVid();
+	abstract public Type getVid();
 
 }
