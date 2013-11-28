@@ -3,6 +3,8 @@ package bloom;
 import java.awt.Rectangle;
 import java.util.Random;
 
+//promena vo ffruit;
+
 public abstract class Fruit {
 
 	protected int centerX, centerY;
