@@ -31,7 +31,7 @@ public class StartingClass extends Applet implements Runnable, KeyListener {
 	private AudioClip audio, audioInGood, audioInBad, audioSplash;
 	private Font font;
 	private int scale = 500;
-	private String gameMode = "christmas";
+	public static String gameMode = "standard";
 	private boolean lost = false;
 
 	@Override

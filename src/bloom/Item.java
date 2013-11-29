@@ -14,7 +14,7 @@ public abstract class Item {
 	public Item() {
 		Random rand = new Random();
 		centerY = 0;
-		centerX = rand.nextInt(680) + 40;
+		centerX = rand.nextInt(680) + 30;
 	}
 
 	public void update() {

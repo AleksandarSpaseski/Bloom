@@ -10,7 +10,10 @@ public class Korpa {
 	public static Rectangle r = new Rectangle(0, 0, 0, 0);
 
 	public void update() {
-		r.setRect(centerX + 30, centerY + 10, 60, 50);
+		if(StartingClass.gameMode.equals("halloween"))
+			r.setRect(centerX + 55, centerY + 10, 60, 50);
+		else
+			r.setRect(centerX + 30, centerY + 10, 60, 50);
 	}
 
 	public void moveLeft() {
@@ -19,7 +22,7 @@ public class Korpa {
 	}
 
 	public void moveRight() {
-		if (centerX < 620)
+		if (centerX < 610)
 			centerX += speed;
 	}
 
