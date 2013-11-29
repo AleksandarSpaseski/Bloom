@@ -31,12 +31,12 @@ public class StartingClass extends Applet implements Runnable, KeyListener {
 	private AudioClip audio, audioInGood, audioInBad, audioSplash;
 	private Font font;
 	private int scale = 500;
-	private String gameMode = "standard";
+	private String gameMode = "christmas";
 	private boolean lost = false;
 
 	@Override
 	public void init() {
-		setSize(800, 500);
+		setSize(800, 480);
 		setFocusable(true);
 		addKeyListener(this);
 		Frame frame = (Frame) this.getParent().getParent();
@@ -53,7 +53,7 @@ public class StartingClass extends Applet implements Runnable, KeyListener {
 
 		try {
 			font = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT,
-					new FileInputStream(gameMode+"/font.ttf"));
+					new FileInputStream(gameMode + "/font.ttf"));
 			font = font.deriveFont(20.0F);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -94,7 +94,7 @@ public class StartingClass extends Applet implements Runnable, KeyListener {
 				Random rand = new Random();
 				int prob = rand.nextInt(10);
 
-				if (prob < 3)
+				if (prob < 2)
 					newItem = new BadItem();
 				else
 					newItem = new GoodItem();
@@ -114,7 +114,7 @@ public class StartingClass extends Applet implements Runnable, KeyListener {
 					} else
 						audioInBad.play();
 					items.remove(i);
-				} else if (items.get(i).r.y > 420) {
+				} else if (items.get(i).r.y > 400) {
 					if (items.get(i) instanceof GoodItem) {
 						Stats.setLives();
 					}
@@ -185,7 +185,7 @@ public class StartingClass extends Applet implements Runnable, KeyListener {
 			g.drawString("Level: " + Stats.level, 5, 60);
 
 			for (Item i : items) {
-				if (i.centerY >= 420) {
+				if (i.centerY >= 400) {
 					g.drawImage(spash, i.centerX, i.centerY, this);
 				} else if (i.getVid().equals(Type.Item1)) {
 					g.drawImage(item1, i.centerX, i.centerY, this);
@@ -213,10 +213,10 @@ public class StartingClass extends Applet implements Runnable, KeyListener {
 			g.setFont(font.deriveFont(50.0F));
 			g.drawImage(endBg, 0, 0, this);
 			g.setColor(Color.RED);
-			g.drawString("GAME OVER", 240, 220);
+			g.drawString("GAME OVER", 230, 220);
 
 			g.setFont(font.deriveFont(23.0F));
-			g.drawString("Your Score is " + Stats.getTotalPoints(), 240, 260);
+			g.drawString("Your Score is " + Stats.getTotalPoints(), 230, 260);
 			audio.stop();
 		}
 	}

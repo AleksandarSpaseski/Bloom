@@ -19,7 +19,7 @@ public abstract class Item {
 
 	public void update() {
 		centerY += speedY;
-		r.setRect(centerX, centerY, 50, 30);
+		r.setRect(centerX, centerY, 50, 20);
 	}
 
 	public int getCenterX() {
